@@ -8,6 +8,7 @@
     --font: "Poppins", serif;
     --font-weight: 300;
     --shadow: 2px 3px 10px 2px black;
+    --transition: 0.2s;
 }
 nav{
     position: sticky;
@@ -15,7 +16,6 @@ nav{
     z-index: 1000;
 }
 ul{
-    position: sticky;
     display: flex;
     list-style: none;
     background-color: var(--main-color);
@@ -28,11 +28,13 @@ li{
     border-radius: 12px;
     font-family: var(--font);
     font-weight: var(--font-weight);
+    transition: var(--transition);
 }
 ul li:nth-child(-n+3):hover{
     background-color: var(--main-color);
     color: var(--sec-color);
     cursor: pointer;
+    transition: var(--transition);
 }
 input{
     padding: 2px;
@@ -42,11 +44,12 @@ input{
 }
 input:hover{
     box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 input:focus{
     border: none;
     outline: none;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
 }
 .parent{
     border-radius: 15px;
@@ -109,6 +112,7 @@ button{
 button:hover{
     box-shadow: none;
     transform: scale(0.9);
+    transition: var(--transition);
 }
 a{
     text-decoration: none;
